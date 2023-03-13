@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+    This is my UAT Space Page
+    It was created in my CSC102 class from Spring 2023
+    this is for wk4 blastoff assignment
+
+    created by:
+    Martin Rios
+    MARRIOS1@uat.edu
+-->
+<html>
+
+<head>
+    <!--This is the head,
+    It is where all the behind the background stuff goes on-->
+    <title>
+        Prof. Prater's UATSpace page
+    </title>
+    <script src="code.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(105, 128, 141);
+        }
+    </style>
+</head>
+<body>
+    <img src="UATSpaceLogo-1.jpg">
+    <br>
+    <br>
+    <!--
+        Audio code begins here (NOTE: i was unable to have the audio automatically play upon page load due to google restrictions)
+    -->
+    <img id="mutebutton" src="soundOFF.png" onclick="muteFun()">
+    <audio id="backgroundaudio" loop>
+        <source src="spacesound.mp3" type="audio/mpeg">
+    </audio>
+    <!--
+        Audio code ends here
+    -->
+    <h1 style="color: rgb(15, 15, 153)">
+        Welcome to the UAT Space Page
+    </h1>
+    <br>
+    <table id="data" border="2" width="70%">
+        <col style="width: 35%">
+        <col style="width: 35%">
+        <thead>
+            <th>Data Type</th>
+            <th>Reading</th>
+        </thead>
+        <tr>
+            <td>Time Elapsed</td>
+            <td>15 seconds</td>
+        </tr>
+        <tr id="latitude">
+            <td>Latitude</td>
+            <td>0</td>
+        </tr>
+        <tr id="longitude">
+            <td>Logitude</td>
+            <td>0</td>
+        </tr>
+        <tr id="gps_altitude">
+            <td>GPS Altitude</td>
+            <td>0</td>
+        </tr>
+        <tr id="bmp_altitude">
+            <td>BMP Sensor Altitude</td>
+            <td>30383.04</td>
+        </tr>
+        <tr id="bmp_pressure">
+            <td>BMP Sensor Pressure</td>
+            <td>2.34</td>
+        </tr>
+        <tr id="bmp_temperature">
+            <td>BMP Sensor Temperature</td>
+            <td>0</td>
+        </tr>
+        <tr id="dig_temperature">
+            <td>Digital Sensor Temperature</td>
+            <td>24.12</td>
+        </tr>
+        <tr id="css_temperature">
+            <td>CSS Sensor Temperature</td>
+            <td>25</td>
+        </tr>
+        <tr id="css_eco2">
+            <td>CSS Sensor eCO2</td>
+            <td>400</td>
+        </tr>
+        <tr id="css_tvoc">
+            <td>CSS Sensor TVOC</td>
+            <td>0</td>
+        </tr>
+        <tr id="uv">
+            <td>UV</td>
+            <td>0</td>
+        </tr>
+        <tr id="accelx">
+            <td>Accel X</td>
+            <td>-0.87</td>
+        </tr>
+        <tr id="accely">
+            <td>Accel Y</td>
+            <td>-0.02</td>
+        </tr>
+        <tr id="accelz">
+            <td>Accel Z</td>
+            <td>9.61</td>
+        </tr>
+        <tr id="magneticx">
+            <td>Magnetic X</td>
+            <td>2.66</td>
+        </tr>
+        <tr id="magneticy">
+            <td>Magnetic Y</td>
+            <td>0.01</td>
+        </tr>
+        <tr id="magneticz">
+            <td>Magnetic Z</td>
+            <td>-0.04</td>
+        </tr>
+        <tr id="gyrox">
+            <td>Gyro X</td>
+            <td>4.66</td>
+        </tr>
+        <tr id="gyroy">
+            <td>Gyro Y</td>
+            <td>0.01</td>
+        </tr>
+        <tr id="gyroz">
+            <td>Gyro Z</td>
+            <td>-0.4</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <button class="startbutton" id="startButton" onclick="startFun();">Start</button>
+    <button class="stopbutton" id="stopButton" onclick="stopFun();">Stop</button>
+    <br>
+    <br>
+    <h2>Craps game</h2>
+    <div id="die1Res">Die 1 Result</div><br>
+    <div id="die2Res">Die 2 Result</div><br>
+    <div id="diceSum">Sum of Die 1 and Die 2</div><br>
+    <div id="gameRes">Game Result</div><br>
+    <button onclick="playCraps()">Play Craps!</button><br>
+    <br>
+    <div class="winClass">wins<br></div>
+    <div id="winsRes">0</div><br>
+    <br>
+    <div class="lossClass">loses<br></div>
+    <div id="losesRes">0</div><br>
+    <br>
+    <div class="drawClass">draws<br></div>
+    <div id="drawsRes">0</div><br>
+    <br>
+    <h3>Sandbox</h3>
+    <br>
+    <div id="sandboxText">Text to play with</div>
+    <script>
+        var phunText1 = "This is my ";
+        var phunText2 = "phun text.";
+        var i = 6;
+        var j = 7;
+        var exp = 6 ** 2;
+        exp--;
+        evenTest = exp % 2;
+        document.getElementId("sandboxText").innerHTML = evenTest;
+    </script>
+</body>
+
+</html>
